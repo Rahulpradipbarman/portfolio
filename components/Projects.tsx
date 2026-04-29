@@ -29,9 +29,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative min-h-screen bg-[#121212] py-24 px-6 md:px-12 lg:px-24">
+    <section id="projects" className="relative min-h-screen bg-zinc-50 dark:bg-[#121212] py-24 px-6 md:px-12 lg:px-24 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black dark:text-white mb-16 transition-colors duration-300">
           Selected Work
         </h2>
         
@@ -48,7 +48,7 @@ export default function Projects() {
               >
                 {/* Image Card */}
                 <div className="w-full lg:w-1/2">
-                  <div className="group relative rounded-2xl overflow-hidden cursor-pointer bg-white/5 border border-white/10 backdrop-blur-md transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.1)]">
+                  <div className="group relative rounded-2xl overflow-hidden cursor-pointer bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md transition-all duration-500 hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/20 dark:hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_40px_rgba(255,255,255,0.1)]">
                     <div className="aspect-video overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img 
@@ -62,16 +62,16 @@ export default function Projects() {
 
                 {/* Description Beside */}
                 <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                  <p className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
+                  <p className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3 transition-colors duration-300">
                     {project.category}
                   </p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-lg text-zinc-300 leading-relaxed mb-8">
+                  <p className="text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed mb-8 transition-colors duration-300">
                     {project.description}
                   </p>
-                  <a href="#" className="self-start inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-colors">
+                  <a href="#" className="self-start inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-semibold rounded-full hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors duration-300">
                     View Details
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </a>

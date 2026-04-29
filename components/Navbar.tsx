@@ -61,7 +61,7 @@ export default function Navbar() {
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
       className="fixed bottom-6 md:bottom-10 left-1/2 z-50"
     >
-      <div className="flex items-center gap-1 p-2 bg-black/40 border border-white/10 backdrop-blur-xl rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+      <div className="flex items-center gap-1 p-2 bg-white/40 dark:bg-black/40 border border-black/10 dark:border-white/10 backdrop-blur-xl rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-colors duration-300">
         {navItems.map((item) => (
           <a
             key={item.name}
@@ -76,14 +76,14 @@ export default function Navbar() {
             className={cn(
               "relative px-4 py-2 text-xs md:text-sm font-medium rounded-full transition-colors",
               activeSection === item.href.substring(1)
-                ? "text-black"
-                : "text-zinc-400 hover:text-white"
+                ? "text-white dark:text-black"
+                : "text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             )}
           >
             {activeSection === item.href.substring(1) && (
               <motion.div
                 layoutId="navbar-active"
-                className="absolute inset-0 bg-white rounded-full -z-10 shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+                className="absolute inset-0 bg-black dark:bg-white rounded-full -z-10 shadow-[0_0_20px_rgba(0,0,0,0.2)] dark:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
                 transition={{ type: "spring", duration: 0.6 }}
               />
             )}

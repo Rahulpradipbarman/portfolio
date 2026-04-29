@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const FRAME_COUNT = 90;
+const FRAME_COUNT = 80;
 
 export default function ScrollyCanvas({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -70,9 +70,9 @@ export default function ScrollyCanvas({ className }: { className?: string }) {
 
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new window.Image();
-      // Format number to be two digits (00, 01, ..., 89)
-      const formattedIndex = i.toString().padStart(2, "0");
-      img.src = `/sequence/frame_${formattedIndex}_delay-0.067s.webp`;
+      // Format number to be three digits (000, 001, ..., 079)
+      const formattedIndex = i.toString().padStart(3, "0");
+      img.src = `/sequence3/heroImage/Flow_202604290945_${formattedIndex}.jpg`;
       
       img.onload = () => {
         // If it's the first image, render it immediately
