@@ -2,6 +2,7 @@ import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Overlay from "@/components/Overlay";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Philosophy from "@/components/Philosophy";
 import Workflow from "@/components/Workflow";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -17,6 +18,7 @@ export default function Home() {
       </div>
       <Skills />
       <Projects />
+      <Philosophy />
       <Workflow />
       <Footer />
       <ThemeToggle />
